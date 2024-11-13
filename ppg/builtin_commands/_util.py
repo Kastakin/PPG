@@ -69,7 +69,7 @@ def update_json(f_path, dict_):
     f.write_text(new_contents)
 
 def is_valid_version(version_str):
-    return bool(re.match(r'\d+\.\d+\.\d+$', version_str))
+    return bool(re.match(r'\d+\.\d+\.\d+(beta)?$', version_str))
 
 def _update_json_str(json_str, dict_):
     if not dict_:
